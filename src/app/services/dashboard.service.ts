@@ -18,7 +18,7 @@ export class DashboardService {
 
 
     // get users from api
-    return this.http.get('http://192.168.0.10:1337/api/dashboard')
+    return this.http.get('http://144.217.165.194:1337/api/dashboard')
       .map((response: Response) => response.json());
   }
   getDashpie(){
@@ -26,7 +26,7 @@ export class DashboardService {
 
 
     // get users from api
-    return this.http.get('http://192.168.0.10:1337/api/dashboard/other')
+    return this.http.get('http://144.217.165.194:1337/api/dashboard/other')
       .map((response: Response) => response.json());
   }
 }

@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class Login {
 
   public form: FormGroup;
-  public email: AbstractControl;
+  public uuid: AbstractControl;
   public password: AbstractControl;
   public submitted: boolean = false;
   public error: String = '';
@@ -21,11 +21,11 @@ export class Login {
   constructor(fb: FormBuilder, private router: Router,
               private authenticationService: AuthenticationService) {
     this.form = fb.group({
-      'email': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+      'uuid': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
     });
 
-    this.email = this.form.controls['email'];
+    this.uuid = this.form.controls['uuid'];
     this.password = this.form.controls['password'];
   }
 
@@ -38,7 +38,7 @@ export class Login {
     this.submitted = true;
     this.progressing = true;
     if (this.form.valid) {
-      this.authenticationService.login(this.email.value, this.password.value)
+      this.authenticationService.login(this.uuid.value, this.password.value)
         .subscribe(result => {
             this.error = '';
             this.router.navigate(['/']);
