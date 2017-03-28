@@ -1,0 +1,42 @@
+<section class="chartist">
+    <div class="row">
+
+
+        <div class="col-md-12 ">
+            <ba-card title="Lines" baCardClass="with-scroll">
+                <h5>Simple line chart</h5>
+                <ba-chartist-chart baChartistChartClass="ct-chart"
+                                   baChartistChartType="Line"
+                                   [baChartistChartData]="data['sampleBarData']">
+                </ba-chartist-chart>
+            </ba-card>
+        </div>
+        <div class="col-md-12 ">
+            <ba-card title="Bars" baCardClass="with-scroll">
+                <h5>Simple bar chart</h5>
+                <ba-chartist-chart baChartistChartClass="ct-chart"
+                                   baChartistChartType="Bar"
+                                   [baChartistChartData]="data['sampleBarData']">
+                </ba-chartist-chart>
+
+
+            </ba-card>
+        </div>
+        <div class="col-md-12">
+            <ba-card title="Pies & Donuts" baCardClass="with-scroll">
+                <div class="row">
+                    <div class="col-md-12 "><h5>Simple Pie</h5>
+                        <ba-chartist-chart baChartistChartClass="ct-chart stacked-bar"
+                                           baChartistChartType="Pie"
+                                           [baChartistChartData]="dataLine['simplePieData']">
+                        </ba-chartist-chart>
+                    </div>
+
+                </div>
+            </ba-card>
+        </div>
+    </div>
+
+
+
+</section>
