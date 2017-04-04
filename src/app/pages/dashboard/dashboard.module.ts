@@ -22,12 +22,14 @@ import { TodoService } from './todo/todo.service';
 import { TrafficChartService } from './trafficChart/trafficChart.service';
 import { UsersMapService } from './usersMap/usersMap.service';
 import { DashboardNew } from './dashboard-new';
+import { DatePickerModule } from 'ng2-datepicker';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     NgaModule,
+    DatePickerModule,
     routing
   ],
   declarations: [

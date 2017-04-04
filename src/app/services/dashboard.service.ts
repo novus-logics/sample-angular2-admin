@@ -13,20 +13,20 @@ export class DashboardService {
     private authenticationService: AuthenticationService) {
   }
 
-  getDashboard(){
+  getDashboard(dateObj){
     // add authorization header with jwt token
 
 
     // get users from api
-    return this.http.get('http://144.217.165.194:1337/api/dashboard')
-      .map((response: Response) => response.json());
+    return this.http.get('http://144.217.165.194:1337/api/dashboard?start_date=' + dateObj.startDate + '&end_date=' + dateObj.startDate)
+        .map((response: Response) => response.json());
   }
-  getDashpie(){
+  getDashpie(dateObj){
     // add authorization header with jwt token
 
 
     // get users from api
-    return this.http.get('http://144.217.165.194:1337/api/dashboard/other')
-      .map((response: Response) => response.json());
+    return this.http.get('http://144.217.165.194:1337/api/dashboard/other?start_date=' + dateObj.startDate + '&end_date=' + dateObj.startDate)
+        .map((response: Response) => response.json());
   }
 }
